@@ -13,7 +13,7 @@ Pseudo code:
 
         current_link = 该链接
 
-        暂停片刻
+        Slow things down so as to not hammer Wikipedia's servers
 """
 
 import time
