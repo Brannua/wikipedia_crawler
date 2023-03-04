@@ -15,8 +15,8 @@ Pseudo code:
         暂停片刻
 """
 
-def continue_crawl(target_url, search_history):
-    if len(search_history) > 25:
+def continue_crawl(target_url, search_history, max_steps=25):
+    if len(search_history) > max_steps:
         print("Too much searching. Terminating...")
         return False
     elif search_history[-1] == target_url:
