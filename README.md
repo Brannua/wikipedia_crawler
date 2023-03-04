@@ -2,6 +2,8 @@
 
 > A demo to practise my python skill learning on udacity.
 
+[doc](https://cs-notes-lpj.github.io/Python/#/)
+
 ### A problem solver
 
 ```
