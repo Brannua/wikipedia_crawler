@@ -16,6 +16,8 @@ Pseudo code:
         暂停片刻
 """
 
+import time
+
 current_url = # random_url_of_a_wikipedia_page
 target_url = "https://en.wikipedia.org/wiki/Philosophy"
 article_chain = []
@@ -47,5 +49,6 @@ def web_crawl():
         # current_link = 该链接
         current_url = first_link
 
-        # 暂停片刻
+        # Slow things down so as to not hammer Wikipedia's servers
+        time.sleep(2)
 
