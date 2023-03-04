@@ -32,7 +32,7 @@ def continue_crawl(target_url, search_history, max_steps=25):
     else:
         return True
 
-# def find_first_link():
+# def find_first_link(page_url):
 
 def web_crawl():
     while continue_crawl(target_url, article_chain):
