@@ -8,12 +8,16 @@ Pseudo code:
 
         将页面添加到 article_chain
 
-        下载页面内容
-        在内容中查找第一个连接
-        页面=该连接
+        下载页面内容 => 在内容中查找第一个连接
+
+        current_link = 该链接
 
         暂停片刻
 """
+
+# current_url = # random_url_of_a_wikipedia_page
+target_url = "https://en.wikipedia.org/wiki/Philosophy"
+article_chain = []
 
 def continue_crawl(target_url, search_history, max_steps=25):
     if len(search_history) > max_steps:
@@ -28,9 +32,19 @@ def continue_crawl(target_url, search_history, max_steps=25):
     else:
         return True
 
-# target_url = random_url_of_a_wikipedia_page
-# article_chain = []
+# def find_first_link():
 
-while continue_crawl(target_url, article_chain):
-    # to be continue...
+def web_crawl():
+    while continue_crawl(target_url, article_chain):
+
+        # 将页面添加到 article_chain
+        article_chain.append(current_url)
+
+        # 下载页面内容 => 在内容中查找第一个连接
+        first_link = find_first_link(article_chain[-1])
+
+        # current_link = 该链接
+        current_url = first_link
+
+        # 暂停片刻
 
