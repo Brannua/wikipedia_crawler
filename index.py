@@ -23,7 +23,7 @@ import requests
 
 import urllib
 
-current_url = "https://en.wikipedia.org/wiki/Bird" # random_url_of_a_wikipedia_page
+current_url = "https://en.wikipedia.org/wiki/Java" # random_url_of_a_wikipedia_page
 target_url = "https://en.wikipedia.org/wiki/Philosophy"
 article_chain = [current_url]
 
@@ -81,7 +81,7 @@ def web_crawl():
         print(current_url)
 
         # Slow things down so as to not hammer Wikipedia's servers
-        time.sleep(2)
+        time.sleep(1)
 
 web_crawl()
 
