@@ -15,6 +15,22 @@ Pseudo code:
         暂停片刻
 """
 
-def continue_crawl():
+def continue_crawl(target_url, search_history):
+    if len(search_history) > 25:
+        print("Too much searching. Terminating...")
+        return False
+    elif search_history[-1] == target_url:
+        print("Find the target URL. Terminating...")
+        return False
+    elif target_url in search_history[:-1]:
+        print("Find a loop. Terminating...")
+        return False
+    else:
+        return True
 
+# target_url = random_url_of_a_wikipedia_page
+# article_chain = []
+
+while continue_crawl(target_url, article_chain):
+    # to be continue...
 
